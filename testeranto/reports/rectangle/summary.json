@@ -1,0 +1,8 @@
+{
+  "./src/Rectangle/Rectangle.test.node.ts": {
+    "runTimeError": "?",
+    "typeErrors": "?",
+    "staticErrors": "?",
+    "prompt": "?"
+  }
+}
