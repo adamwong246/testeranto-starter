@@ -1,8 +1,6 @@
-import { Ibdd_out, ITestSpecification } from "testeranto/src/Types";
 
-import someFeature from "./README.md";
+import { Ibdd_out } from "testeranto/src/Types";
 
-import { I } from "./Rectangle.test.interface";
 
 export type O = Ibdd_out<
   {
@@ -28,24 +26,21 @@ export type O = Ibdd_out<
     prototype: [];
   },
   {
-    Default;
-    WidthOfOneAndHeightOfOne;
+    Default: [];
+    WidthOfOneAndHeightOfOne: [];
     WidthAndHeightOf: [number, number];
   }
 >;
 
-export const RectangleTesterantoBaseTestSpecification: ITestSpecification<
-  I,
-  O
-> = (Suite, Given, When, Then, Check) => {
+export const RectangleTesterantoBaseTestSpecification = (Suite, Given, When, Then, Check) => {
   return [
     Suite.Default(
       "Testing the Rectangle class",
       {
         test0: Given.Default(
           ["https://api.github.com/repos/adamwong246/testeranto/issues/8"],
-          [When.setWidth(4), When.setHeight(19)],
-          [Then.getWidth(4), Then.getHeight(19)]
+          [],
+          [Then.getWidth(2)]
         ),
         test1: Given.Default(
           [`Rectangles have width and height.`],
@@ -68,7 +63,7 @@ export const RectangleTesterantoBaseTestSpecification: ITestSpecification<
           [Then.getWidth(2), Then.getHeight(2)]
         ),
         test3: Given.Default(
-          [someFeature],
+          [],
           [When.setHeight(5), When.setWidth(5)],
           [Then.area(25)]
         ),
@@ -85,13 +80,7 @@ export const RectangleTesterantoBaseTestSpecification: ITestSpecification<
       },
 
       [
-        Check.Default("imperative style?!", [], async (rectangle) => {
-          console.log(rectangle);
-          // Then.getWidth(2).thenCB(rectangle);
-          // Then.getHeight(2).thenCB(rectangle);
-          // When.setHeight(22).whenCB(rectangle);
-          // Then.getHeight(232).thenCB(rectangle);
-        }),
+
       ]
     ),
   ];

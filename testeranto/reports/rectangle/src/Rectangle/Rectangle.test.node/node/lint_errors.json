@@ -1,0 +1,127 @@
+[
+  {
+    "filePath": "/Users/adam/Code/testeranto-starter/src/Rectangle/Rectangle.test.interface.ts",
+    "messages": [
+      {
+        "ruleId": "@typescript-eslint/no-unused-vars",
+        "severity": 2,
+        "message": "'PM' is defined but never used.",
+        "line": 2,
+        "column": 15,
+        "nodeType": null,
+        "messageId": "unusedVar",
+        "endLine": 2,
+        "endColumn": 17
+      },
+      {
+        "ruleId": "@typescript-eslint/no-unused-vars",
+        "severity": 2,
+        "message": "'BaseTestInterface' is defined but never used.",
+        "line": 4,
+        "column": 10,
+        "nodeType": null,
+        "messageId": "unusedVar",
+        "endLine": 4,
+        "endColumn": 27
+      },
+      {
+        "ruleId": "@typescript-eslint/no-unused-vars",
+        "severity": 2,
+        "message": "'afterEach' is defined but never used.",
+        "line": 7,
+        "column": 10,
+        "nodeType": null,
+        "messageId": "unusedVar",
+        "endLine": 7,
+        "endColumn": 19
+      },
+      {
+        "ruleId": "@typescript-eslint/no-unused-vars",
+        "severity": 2,
+        "message": "'x' is defined but never used.",
+        "line": 35,
+        "column": 16,
+        "nodeType": null,
+        "messageId": "unusedVar",
+        "endLine": 35,
+        "endColumn": 17
+      },
+      {
+        "ruleId": "@typescript-eslint/no-explicit-any",
+        "severity": 2,
+        "message": "Unexpected any. Specify a different type.",
+        "line": 35,
+        "column": 19,
+        "nodeType": "TSAnyKeyword",
+        "messageId": "unexpectedAny",
+        "endLine": 35,
+        "endColumn": 22,
+        "suggestions": [
+          {
+            "messageId": "suggestUnknown",
+            "fix": {
+              "range": [
+                774,
+                777
+              ],
+              "text": "unknown"
+            },
+            "desc": "Use `unknown` instead, this will force you to explicitly, and safely assert the type is correct."
+          },
+          {
+            "messageId": "suggestNever",
+            "fix": {
+              "range": [
+                774,
+                777
+              ],
+              "text": "never"
+            },
+            "desc": "Use `never` instead, this is useful when instantiating generic type parameters that you don't need to know the type of."
+          }
+        ]
+      },
+      {
+        "ruleId": "@typescript-eslint/no-unused-vars",
+        "severity": 2,
+        "message": "'y' is defined but never used.",
+        "line": 35,
+        "column": 24,
+        "nodeType": null,
+        "messageId": "unusedVar",
+        "endLine": 35,
+        "endColumn": 25
+      }
+    ],
+    "suppressedMessages": [],
+    "errorCount": 6,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "/Users/adam/Code/testeranto-starter/src/Rectangle/Rectangle.test.specification.ts",
+    "messages": [
+      {
+        "ruleId": "@typescript-eslint/no-unused-vars",
+        "severity": 2,
+        "message": "'Check' is defined but never used.",
+        "line": 35,
+        "column": 84,
+        "nodeType": null,
+        "messageId": "unusedVar",
+        "endLine": 35,
+        "endColumn": 89
+      }
+    ],
+    "suppressedMessages": [],
+    "errorCount": 1,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  }
+]

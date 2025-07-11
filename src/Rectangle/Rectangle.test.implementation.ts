@@ -1,9 +1,7 @@
 import { assert } from "chai";
-import { ITestImplementation } from "testeranto/src/Types";
 import type { PM } from "testeranto/src/PM";
 
 import Rectangle from "./Rectangle";
-import { I } from "./Rectangle.test.interface";
 import { O } from "./Rectangle.test.specification";
 
 export type M = {
@@ -22,11 +20,7 @@ export type M = {
   };
 };
 
-export const RectangleTesterantoBaseTestImplementation: ITestImplementation<
-  I,
-  O,
-  M
-> = {
+export const RectangleTesterantoBaseTestImplementation = {
   suites: {
     Default: "a default suite",
   },
@@ -63,10 +57,12 @@ export const RectangleTesterantoBaseTestImplementation: ITestImplementation<
       return rectangle;
     },
     getWidth: (expectedWidth) => (rectangle) => {
+      console.log("then.getWidth", expectedWidth)
       assert.equal(rectangle.getWidth(), expectedWidth);
       return rectangle;
     },
     getHeight: (expectedHeight) => (rectangle) => {
+      console.log("then.getHeight", expectedHeight)
       assert.equal(rectangle.getHeight(), expectedHeight);
       return rectangle;
     },

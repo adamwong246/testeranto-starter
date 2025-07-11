@@ -1,8 +1,23 @@
 {
   "./src/Rectangle/Rectangle.test.node.ts": {
-    "runTimeError": "?",
-    "typeErrors": "?",
-    "staticErrors": "?",
-    "prompt": "?"
+    "runTimeError": 0,
+    "typeErrors": 47,
+    "staticErrors": 2,
+    "prompt": "aider --model deepseek/deepseek-chat --load testeranto/rectangle/reports/node/./src/Rectangle/Rectangle.test.node/prompt.txt",
+    "failingFeatures": {}
+  },
+  "./src/Rectangle/Rectangle.test.web.ts": {
+    "runTimeError": 0,
+    "typeErrors": 49,
+    "staticErrors": 2,
+    "prompt": "aider --model deepseek/deepseek-chat --load testeranto/rectangle/reports/web/./src/Rectangle/Rectangle.test.web/prompt.txt",
+    "failingFeatures": {}
+  },
+  "./src/Rectangle/Rectangle.test.pure.ts": {
+    "runTimeError": 0,
+    "typeErrors": 47,
+    "staticErrors": 2,
+    "prompt": "aider --model deepseek/deepseek-chat --load testeranto/rectangle/reports/pure/./src/Rectangle/Rectangle.test.pure/prompt.txt",
+    "failingFeatures": {}
   }
 }

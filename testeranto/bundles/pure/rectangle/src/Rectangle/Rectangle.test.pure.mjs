@@ -739,110 +739,75 @@ var Testeranto = class extends ClassBuilder {
   }
 };
 
-// ../testeranto/src/PM/node.ts
-import net from "net";
-import fs from "fs";
-import path from "path";
-
 // ../testeranto/src/PM/index.ts
 var PM = class {
 };
 
-// ../testeranto/src/PM/node.ts
-var fPaths = [];
-var PM_Node = class extends PM {
-  constructor(t, ipcFile) {
+// ../testeranto/src/PM/pure.ts
+var PM_Pure = class extends PM {
+  constructor(t) {
     super();
+    this.server = {};
     this.testResourceConfiguration = t;
-    this.client = net.createConnection(ipcFile, () => {
-      return;
-    });
+  }
+  getInnerHtml(selector, page) {
+    throw new Error("pure.ts getInnHtml not implemented");
+    return Promise.resolve("");
+  }
+  stopSideCar(uid) {
+    throw new Error("pure.ts getInnHtml not implemented");
+    return Promise.resolve(true);
   }
   start() {
-    throw new Error("DEPREFECATED");
+    return new Promise((r) => r());
   }
   stop() {
-    throw new Error("stop not implemented.");
+    return new Promise((r) => r());
   }
-  send(command, ...argz) {
-    const key = Math.random().toString();
-    if (!this.client) {
-      console.error(
-        `Tried to send "${command} (${argz})" but the test has not been started and the IPC client is not established. Exiting as failure!`
-      );
-      process.exit(-1);
-    }
-    return new Promise((res) => {
-      const myListener = (event) => {
-        const x = JSON.parse(event);
-        if (x.key === key) {
-          process.removeListener("message", myListener);
-          res(x.payload);
-        }
-      };
-      process.addListener("message", myListener);
-      this.client.write(JSON.stringify([command, ...argz, key]));
-    });
+  launchSideCar(n) {
+    return globalThis["launchSideCar"](n, this.testResourceConfiguration.name);
   }
-  async launchSideCar(n) {
-    return this.send(
-      "launchSideCar",
-      n,
-      this.testResourceConfiguration.name
-    );
-  }
-  stopSideCar(n) {
-    return this.send(
-      "stopSideCar",
-      n,
-      this.testResourceConfiguration.name
-    );
-  }
-  async pages() {
-    return this.send("pages", ...arguments);
+  pages() {
+    return globalThis["pages"]();
   }
   waitForSelector(p, s) {
-    return this.send("waitForSelector", ...arguments);
+    return globalThis["waitForSelector"](p, s);
   }
   closePage(p) {
-    return this.send("closePage", ...arguments);
+    return globalThis["closePage"](p);
   }
-  goto(page, url) {
-    return this.send("goto", ...arguments);
+  goto(cdpPage, url) {
+    return globalThis["goto"](cdpPage.mainFrame()._id, url);
   }
-  async newPage() {
-    return this.send("newPage");
+  newPage() {
+    return globalThis["newPage"]();
   }
-  $(selector, page) {
-    return this.send("$", ...arguments);
+  $(selector) {
+    return globalThis["$"](selector);
   }
   isDisabled(selector) {
-    return this.send("isDisabled", ...arguments);
+    return globalThis["isDisabled"](selector);
   }
-  getAttribute(selector, attribute, p) {
-    return this.send("getAttribute", ...arguments);
+  getAttribute(selector, attribute) {
+    return globalThis["getAttribute"](selector, attribute);
   }
-  getInnerHtml(selector, p) {
-    return this.send("getInnerHtml", ...arguments);
+  getValue(selector) {
+    return globalThis["getValue"](selector);
   }
-  // setValue(selector: string) {
-  //   return this.send("getValue", ...arguments);
-  // }
   focusOn(selector) {
-    return this.send("focusOn", ...arguments);
+    return globalThis["focusOn"](selector);
   }
-  typeInto(selector) {
-    return this.send("typeInto", ...arguments);
+  typeInto(selector, value) {
+    return globalThis["typeInto"](selector, value);
   }
   page() {
-    return this.send("page");
+    return globalThis["page"]();
   }
   click(selector) {
-    return this.send("click", ...arguments);
+    return globalThis["click"](selector);
   }
   screencast(opts, page) {
-    return this.send(
-      "screencast",
+    return globalThis["screencast"](
       {
         ...opts,
         path: this.testResourceConfiguration.fs + "/" + opts.path
@@ -852,111 +817,62 @@ var PM_Node = class extends PM {
     );
   }
   screencastStop(p) {
-    return this.send("screencastStop", ...arguments);
+    return globalThis["screencastStop"](p);
   }
-  customScreenShot(x, y) {
-    const opts = x[0];
-    const page = x[1];
-    return this.send(
-      "customScreenShot",
+  customScreenShot(opts, page) {
+    return globalThis["customScreenShot"](
       {
         ...opts,
         path: this.testResourceConfiguration.fs + "/" + opts.path
       },
-      this.testResourceConfiguration.name,
-      page
+      page,
+      this.testResourceConfiguration.name
     );
   }
-  async existsSync(destFolder) {
-    return await this.send(
-      "existsSync",
+  existsSync(destFolder) {
+    return globalThis["existsSync"](
       this.testResourceConfiguration.fs + "/" + destFolder
     );
   }
   mkdirSync() {
-    return this.send("mkdirSync", this.testResourceConfiguration.fs + "/");
+    return globalThis["mkdirSync"](this.testResourceConfiguration.fs + "/");
   }
-  async write(uid, contents) {
-    return await this.send("write", ...arguments);
+  write(uid, contents) {
+    return globalThis["write"](uid, contents);
   }
-  async writeFileSync(filepath, contents) {
-    return await this.send(
-      "writeFileSync",
+  writeFileSync(filepath, contents) {
+    return globalThis["writeFileSync"](
       this.testResourceConfiguration.fs + "/" + filepath,
       contents,
       this.testResourceConfiguration.name
     );
   }
-  async createWriteStream(filepath) {
-    return await this.send(
-      "createWriteStream",
+  createWriteStream(filepath) {
+    return globalThis["createWriteStream"](
       this.testResourceConfiguration.fs + "/" + filepath,
       this.testResourceConfiguration.name
     );
   }
-  async end(uid) {
-    return await this.send("end", ...arguments);
+  end(uid) {
+    return globalThis["end"](uid);
   }
-  async customclose() {
-    return await this.send(
-      "customclose",
+  customclose() {
+    globalThis["customclose"](
       this.testResourceConfiguration.fs,
       this.testResourceConfiguration.name
     );
   }
   testArtiFactoryfileWriter(tLog, callback) {
-    return (fPath, value) => {
-      callback(
-        new Promise((res, rej) => {
-          tLog("testArtiFactory =>", fPath);
-          const cleanPath = path.resolve(fPath);
-          fPaths.push(cleanPath.replace(process.cwd(), ``));
-          const targetDir = cleanPath.split("/").slice(0, -1).join("/");
-          fs.mkdir(targetDir, { recursive: true }, async (error) => {
-            if (error) {
-              console.error(`\u2757\uFE0FtestArtiFactory failed`, targetDir, error);
-            }
-            fs.writeFileSync(
-              path.resolve(
-                targetDir.split("/").slice(0, -1).join("/"),
-                "manifest"
-              ),
-              fPaths.join(`
-`),
-              {
-                encoding: "utf-8"
-              }
-            );
-            if (Buffer.isBuffer(value)) {
-              fs.writeFileSync(fPath, value, "binary");
-              res();
-            } else if (`string` === typeof value) {
-              fs.writeFileSync(fPath, value.toString(), {
-                encoding: "utf-8"
-              });
-              res();
-            } else {
-              const pipeStream = value;
-              const myFile = fs.createWriteStream(fPath);
-              pipeStream.pipe(myFile);
-              pipeStream.on("close", () => {
-                myFile.close();
-                res();
-              });
-            }
-          });
-        })
-      );
-    };
   }
-  // launch(options?: PuppeteerLaunchOptions): Promise<Browser>;
-  startPuppeteer(options) {
-  }
+  // startPuppeteer(options?: any): any {
+  //   // return puppeteer.connect(options).then((b) => {
+  //   //   this.browser = b;
+  //   // });
+  // }
 };
 
-// ../testeranto/src/Node.ts
-var ipcfile;
-var NodeTesteranto = class extends Testeranto {
+// ../testeranto/src/Pure.ts
+var PureTesteranto = class extends Testeranto {
   constructor(input, testSpecification, testImplementation, testResourceRequirement, testInterface) {
     super(
       input,
@@ -970,33 +886,19 @@ var NodeTesteranto = class extends Testeranto {
   }
   async receiveTestResourceConfig(partialTestResource) {
     const t = JSON.parse(partialTestResource);
-    const pm = new PM_Node(t, ipcfile);
+    const pm = new PM_Pure(t);
     return await this.testJobs[0].receiveTestResourceConfig(pm);
   }
 };
-var testeranto = async (input, testSpecification, testImplementation, testInterface, testResourceRequirement = defaultTestResourceRequirement) => {
-  const t = new NodeTesteranto(
+var Pure_default = async (input, testSpecification, testImplementation, testInterface, testResourceRequirement = defaultTestResourceRequirement) => {
+  return new PureTesteranto(
     input,
     testSpecification,
     testImplementation,
     testResourceRequirement,
     testInterface
   );
-  process.on("unhandledRejection", (reason, promise) => {
-    console.error("Unhandled Rejection at:", promise, "reason:", reason);
-  });
-  try {
-    ipcfile = process.argv[3];
-    const f = await t.receiveTestResourceConfig(process.argv[2]);
-    console.error("goodbye node with failures", f.fails);
-    process.exit(f.fails);
-  } catch (e) {
-    console.error("goodbye node with caught error", e);
-    process.exit(-1);
-  }
-  return t;
 };
-var Node_default = testeranto;
 
 // node_modules/chai/chai.js
 var __defProp = Object.defineProperty;
@@ -2255,8 +2157,8 @@ function hasProperty(obj, name) {
   return name in Object(obj);
 }
 __name(hasProperty, "hasProperty");
-function parsePath(path2) {
-  const str = path2.replace(/([^\\])\[/g, "$1.[");
+function parsePath(path) {
+  const str = path.replace(/([^\\])\[/g, "$1.[");
   const parts = str.match(/(\\\.|[^.]+?)+/g);
   return parts.map((value) => {
     if (value === "constructor" || value === "__proto__" || value === "prototype") {
@@ -2294,8 +2196,8 @@ function internalGetPathValue(obj, parsed, pathDepth) {
   return res;
 }
 __name(internalGetPathValue, "internalGetPathValue");
-function getPathInfo(obj, path2) {
-  const parsed = parsePath(path2);
+function getPathInfo(obj, path) {
+  const parsed = parsePath(path);
   const last = parsed[parsed.length - 1];
   const info = {
     parent: parsed.length > 1 ? internalGetPathValue(obj, parsed, parsed.length - 1) : obj,
@@ -5151,18 +5053,15 @@ var RectangleTesterantoBaseInterface = {
   }
 };
 
-// src/Rectangle/Rectangle.test.node.ts
-var Rectangle_test_node_default = Node_default(
+// src/Rectangle/Rectangle.test.pure.ts
+var Rectangle_test_pure_default = Pure_default(
   null,
   RectangleTesterantoBaseTestSpecification,
   RectangleTesterantoBaseTestImplementation,
   RectangleTesterantoBaseInterface
-).catch((error) => {
-  console.error("Test runner error:", error);
-  process.exit(1);
-});
+);
 export {
-  Rectangle_test_node_default as default
+  Rectangle_test_pure_default as default
 };
 /*! Bundled license information:
 

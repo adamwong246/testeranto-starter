@@ -4,7 +4,7 @@
   "metafile": {
     "inputs": {
       "../testeranto/src/lib/index.ts": {
-        "bytes": 2834,
+        "bytes": 3599,
         "imports": [
           {
             "path": "../PM/pure.js",
@@ -40,7 +40,7 @@
         "format": "esm"
       },
       "../testeranto/src/lib/pmProxy.ts": {
-        "bytes": 8767,
+        "bytes": 8884,
         "imports": [
           {
             "path": "./types",
@@ -51,13 +51,8 @@
         "format": "esm"
       },
       "../testeranto/src/lib/abstractBase.ts": {
-        "bytes": 11091,
+        "bytes": 11308,
         "imports": [
-          {
-            "path": "../Types.js",
-            "kind": "import-statement",
-            "external": true
-          },
           {
             "path": ".",
             "kind": "import-statement",
@@ -77,7 +72,7 @@
         "format": "esm"
       },
       "../testeranto/src/lib/basebuilder.ts": {
-        "bytes": 5974,
+        "bytes": 6058,
         "imports": [
           {
             "path": "stream",
@@ -108,7 +103,7 @@
         "format": "esm"
       },
       "../testeranto/src/lib/classBuilder.ts": {
-        "bytes": 3483,
+        "bytes": 3529,
         "imports": [
           {
             "path": "../Types.js",
@@ -139,7 +134,7 @@
         "format": "esm"
       },
       "../testeranto/src/lib/core.ts": {
-        "bytes": 4489,
+        "bytes": 4918,
         "imports": [
           {
             "path": "../Types.js",
@@ -170,7 +165,7 @@
         "format": "esm"
       },
       "../testeranto/src/PM/index.ts": {
-        "bytes": 1590,
+        "bytes": 1838,
         "imports": [
           {
             "path": "puppeteer-core",
@@ -191,7 +186,7 @@
         "format": "esm"
       },
       "../testeranto/src/PM/node.ts": {
-        "bytes": 6087,
+        "bytes": 7333,
         "imports": [
           {
             "path": "net",
@@ -232,7 +227,7 @@
         "format": "esm"
       },
       "../testeranto/src/Node.ts": {
-        "bytes": 2647,
+        "bytes": 2741,
         "imports": [
           {
             "path": "../testeranto/src/lib/core.ts",
@@ -258,12 +253,12 @@
         "format": "esm"
       },
       "src/Rectangle/Rectangle.ts": {
-        "bytes": 596,
+        "bytes": 563,
         "imports": [],
         "format": "esm"
       },
       "src/Rectangle/Rectangle.test.implementation.ts": {
-        "bytes": 2568,
+        "bytes": 2524,
         "imports": [
           {
             "path": "node_modules/chai/chai.js",
@@ -271,19 +266,9 @@
             "original": "chai"
           },
           {
-            "path": "testeranto/src/Types",
-            "kind": "import-statement",
-            "external": true
-          },
-          {
             "path": "src/Rectangle/Rectangle.ts",
             "kind": "import-statement",
             "original": "./Rectangle"
-          },
-          {
-            "path": "./Rectangle.test.interface",
-            "kind": "import-statement",
-            "external": true
           },
           {
             "path": "./Rectangle.test.specification",
@@ -293,25 +278,11 @@
         ],
         "format": "esm"
       },
-      "feature-markdown:/Users/adam/Code/testeranto-starter/src/Rectangle/README.md": {
-        "bytes": 66,
-        "imports": []
-      },
       "src/Rectangle/Rectangle.test.specification.ts": {
-        "bytes": 2521,
+        "bytes": 2005,
         "imports": [
           {
             "path": "testeranto/src/Types",
-            "kind": "import-statement",
-            "external": true
-          },
-          {
-            "path": "feature-markdown:/Users/adam/Code/testeranto-starter/src/Rectangle/README.md",
-            "kind": "import-statement",
-            "original": "./README.md"
-          },
-          {
-            "path": "./Rectangle.test.interface",
             "kind": "import-statement",
             "external": true
           }
@@ -319,7 +290,7 @@
         "format": "esm"
       },
       "src/Rectangle/Rectangle.test.interface.ts": {
-        "bytes": 634,
+        "bytes": 795,
         "imports": [
           {
             "path": "testeranto/src/Types",
@@ -327,7 +298,7 @@
             "external": true
           },
           {
-            "path": "testeranto/src/lib/types",
+            "path": "testeranto/src/lib/index",
             "kind": "import-statement",
             "external": true
           },
@@ -335,12 +306,17 @@
             "path": "./Rectangle",
             "kind": "import-statement",
             "external": true
+          },
+          {
+            "path": "node:test",
+            "kind": "import-statement",
+            "external": true
           }
         ],
         "format": "esm"
       },
       "src/Rectangle/Rectangle.test.node.ts": {
-        "bytes": 506,
+        "bytes": 560,
         "imports": [
           {
             "path": "../testeranto/src/Node.ts",
@@ -391,55 +367,52 @@
         "entryPoint": "src/Rectangle/Rectangle.test.node.ts",
         "inputs": {
           "../testeranto/src/lib/index.ts": {
-            "bytesInOutput": 484
+            "bytesInOutput": 674
           },
           "../testeranto/src/lib/pmProxy.ts": {
-            "bytesInOutput": 3195
+            "bytesInOutput": 3201
           },
           "../testeranto/src/lib/abstractBase.ts": {
-            "bytesInOutput": 6708
+            "bytesInOutput": 6852
           },
           "../testeranto/src/lib/basebuilder.ts": {
-            "bytesInOutput": 2873
+            "bytesInOutput": 2740
           },
           "../testeranto/src/lib/classBuilder.ts": {
-            "bytesInOutput": 2532
+            "bytesInOutput": 2248
           },
           "../testeranto/src/lib/core.ts": {
-            "bytesInOutput": 2769
+            "bytesInOutput": 2684
           },
           "../testeranto/src/PM/node.ts": {
-            "bytesInOutput": 4986
+            "bytesInOutput": 5507
           },
           "../testeranto/src/PM/index.ts": {
             "bytesInOutput": 20
           },
           "../testeranto/src/Node.ts": {
-            "bytesInOutput": 1259
+            "bytesInOutput": 1301
           },
           "node_modules/chai/chai.js": {
             "bytesInOutput": 130531
           },
           "src/Rectangle/Rectangle.ts": {
-            "bytesInOutput": 511
+            "bytesInOutput": 479
           },
           "src/Rectangle/Rectangle.test.implementation.ts": {
-            "bytesInOutput": 1888
-          },
-          "feature-markdown:/Users/adam/Code/testeranto-starter/src/Rectangle/README.md": {
-            "bytesInOutput": 91
+            "bytesInOutput": 1992
           },
           "src/Rectangle/Rectangle.test.specification.ts": {
-            "bytesInOutput": 1578
+            "bytesInOutput": 1385
           },
           "src/Rectangle/Rectangle.test.interface.ts": {
-            "bytesInOutput": 252
+            "bytesInOutput": 346
           },
           "src/Rectangle/Rectangle.test.node.ts": {
-            "bytesInOutput": 183
+            "bytesInOutput": 270
           }
         },
-        "bytes": 168135
+        "bytes": 168424
       }
     }
   }

@@ -1,8 +1,674 @@
 {
   "errors": [],
-  "warnings": [],
+  "warnings": [
+    {
+      "id": "",
+      "location": {
+        "column": 0,
+        "file": "../testeranto/src/PM/pure.ts",
+        "length": 0,
+        "line": 179,
+        "lineText": "",
+        "namespace": "file",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": {
+            "column": 24,
+            "file": "../testeranto/src/Pure.ts",
+            "length": 14,
+            "line": 16,
+            "lineText": "import { PM_Pure } from \"./PM/pure.js\";",
+            "namespace": "",
+            "suggestion": ""
+          },
+          "text": "The plugin \"console-detector\" was triggered by this import"
+        }
+      ],
+      "pluginName": "console-detector",
+      "text": "Detected console.error call - Pure runtime does not allow IO operations. Use Node runtime instead."
+    },
+    {
+      "id": "",
+      "location": {
+        "column": 0,
+        "file": "../testeranto/src/lib/abstractBase.ts",
+        "length": 0,
+        "line": 95,
+        "lineText": "",
+        "namespace": "file",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": {
+            "column": 7,
+            "file": "../testeranto/src/lib/core.ts",
+            "length": 19,
+            "line": 24,
+            "lineText": "} from \"./abstractBase.js\";",
+            "namespace": "",
+            "suggestion": ""
+          },
+          "text": "The plugin \"console-detector\" was triggered by this import"
+        }
+      ],
+      "pluginName": "console-detector",
+      "text": "Detected console.log call - Pure runtime does not allow IO operations. Use Node runtime instead."
+    },
+    {
+      "id": "",
+      "location": {
+        "column": 0,
+        "file": "../testeranto/src/lib/abstractBase.ts",
+        "length": 0,
+        "line": 123,
+        "lineText": "",
+        "namespace": "file",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": {
+            "column": 7,
+            "file": "../testeranto/src/lib/core.ts",
+            "length": 19,
+            "line": 24,
+            "lineText": "} from \"./abstractBase.js\";",
+            "namespace": "",
+            "suggestion": ""
+          },
+          "text": "The plugin \"console-detector\" was triggered by this import"
+        }
+      ],
+      "pluginName": "console-detector",
+      "text": "Detected console.error call - Pure runtime does not allow IO operations. Use Node runtime instead."
+    },
+    {
+      "id": "",
+      "location": {
+        "column": 0,
+        "file": "../testeranto/src/lib/basebuilder.ts",
+        "length": 0,
+        "line": 118,
+        "lineText": "",
+        "namespace": "file",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": {
+            "column": 28,
+            "file": "../testeranto/src/lib/classBuilder.ts",
+            "length": 18,
+            "line": 5,
+            "lineText": "import { BaseBuilder } from \"./basebuilder.js\";",
+            "namespace": "",
+            "suggestion": ""
+          },
+          "text": "The plugin \"console-detector\" was triggered by this import"
+        }
+      ],
+      "pluginName": "console-detector",
+      "text": "Detected console.log call - Pure runtime does not allow IO operations. Use Node runtime instead."
+    },
+    {
+      "id": "",
+      "location": {
+        "column": 0,
+        "file": "../testeranto/src/lib/classBuilder.ts",
+        "length": 0,
+        "line": 66,
+        "lineText": "",
+        "namespace": "file",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": {
+            "column": 29,
+            "file": "../testeranto/src/lib/core.ts",
+            "length": 19,
+            "line": 25,
+            "lineText": "import { ClassBuilder } from \"./classBuilder.js\";",
+            "namespace": "",
+            "suggestion": ""
+          },
+          "text": "The plugin \"console-detector\" was triggered by this import"
+        }
+      ],
+      "pluginName": "console-detector",
+      "text": "Detected console.log call - Pure runtime does not allow IO operations. Use Node runtime instead."
+    },
+    {
+      "id": "",
+      "location": {
+        "column": 0,
+        "file": "../testeranto/src/lib/core.ts",
+        "length": 0,
+        "line": 135,
+        "lineText": "",
+        "namespace": "file",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": {
+            "column": 23,
+            "file": "../testeranto/src/Pure.ts",
+            "length": 15,
+            "line": 1,
+            "lineText": "import Testeranto from \"./lib/core.js\";",
+            "namespace": "",
+            "suggestion": ""
+          },
+          "text": "The plugin \"console-detector\" was triggered by this import"
+        }
+      ],
+      "pluginName": "console-detector",
+      "text": "Detected console.log call - Pure runtime does not allow IO operations. Use Node runtime instead."
+    },
+    {
+      "id": "",
+      "location": {
+        "column": 0,
+        "file": "../testeranto/src/lib/index.ts",
+        "length": 0,
+        "line": 49,
+        "lineText": "",
+        "namespace": "file",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": {
+            "column": 7,
+            "file": "../testeranto/src/Pure.ts",
+            "length": 16,
+            "line": 6,
+            "lineText": "} from \"./lib/index.js\";",
+            "namespace": "",
+            "suggestion": ""
+          },
+          "text": "The plugin \"console-detector\" was triggered by this import"
+        }
+      ],
+      "pluginName": "console-detector",
+      "text": "Detected console.error call - Pure runtime does not allow IO operations. Use Node runtime instead."
+    },
+    {
+      "id": "",
+      "location": {
+        "column": 0,
+        "file": "node_modules/chai/chai.js",
+        "length": 0,
+        "line": 896,
+        "lineText": "",
+        "namespace": "file",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": {
+            "column": 23,
+            "file": "src/Rectangle/Rectangle.test.implementation.ts",
+            "length": 6,
+            "line": 1,
+            "lineText": "import { assert } from \"chai\";",
+            "namespace": "",
+            "suggestion": ""
+          },
+          "text": "The plugin \"console-detector\" was triggered by this import"
+        }
+      ],
+      "pluginName": "console-detector",
+      "text": "Detected console.log call - Pure runtime does not allow IO operations. Use Node runtime instead."
+    },
+    {
+      "id": "",
+      "location": {
+        "column": 0,
+        "file": "node_modules/chai/chai.js",
+        "length": 0,
+        "line": 1391,
+        "lineText": "",
+        "namespace": "file",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": {
+            "column": 23,
+            "file": "src/Rectangle/Rectangle.test.implementation.ts",
+            "length": 6,
+            "line": 1,
+            "lineText": "import { assert } from \"chai\";",
+            "namespace": "",
+            "suggestion": ""
+          },
+          "text": "The plugin \"console-detector\" was triggered by this import"
+        }
+      ],
+      "pluginName": "console-detector",
+      "text": "Detected console.warn call - Pure runtime does not allow IO operations. Use Node runtime instead."
+    },
+    {
+      "id": "",
+      "location": {
+        "column": 0,
+        "file": "src/Rectangle/Rectangle.test.implementation.ts",
+        "length": 0,
+        "line": 60,
+        "lineText": "",
+        "namespace": "file",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": {
+            "column": 58,
+            "file": "src/Rectangle/Rectangle.test.pure.ts",
+            "length": 33,
+            "line": 3,
+            "lineText": "import { RectangleTesterantoBaseTestImplementation } from \"./Rectangle.test.implementation\";",
+            "namespace": "",
+            "suggestion": ""
+          },
+          "text": "The plugin \"console-detector\" was triggered by this import"
+        }
+      ],
+      "pluginName": "console-detector",
+      "text": "Detected console.log call - Pure runtime does not allow IO operations. Use Node runtime instead."
+    }
+  ],
   "metafile": {
-    "inputs": {},
-    "outputs": {}
+    "inputs": {
+      "../testeranto/src/lib/index.ts": {
+        "bytes": 3599,
+        "imports": [
+          {
+            "path": "../PM/pure.js",
+            "kind": "import-statement",
+            "external": true
+          },
+          {
+            "path": "../PM/node.js",
+            "kind": "import-statement",
+            "external": true
+          },
+          {
+            "path": "../PM/web.js",
+            "kind": "import-statement",
+            "external": true
+          },
+          {
+            "path": "../Types.js",
+            "kind": "import-statement",
+            "external": true
+          },
+          {
+            "path": "./abstractBase.js",
+            "kind": "import-statement",
+            "external": true
+          },
+          {
+            "path": "./types.js",
+            "kind": "import-statement",
+            "external": true
+          }
+        ],
+        "format": "esm"
+      },
+      "../testeranto/src/lib/pmProxy.ts": {
+        "bytes": 8884,
+        "imports": [
+          {
+            "path": "./types",
+            "kind": "import-statement",
+            "external": true
+          }
+        ],
+        "format": "esm"
+      },
+      "../testeranto/src/lib/abstractBase.ts": {
+        "bytes": 11308,
+        "imports": [
+          {
+            "path": ".",
+            "kind": "import-statement",
+            "external": true
+          },
+          {
+            "path": "./types.js",
+            "kind": "import-statement",
+            "external": true
+          },
+          {
+            "path": "../testeranto/src/lib/pmProxy.ts",
+            "kind": "import-statement",
+            "original": "./pmProxy.js"
+          }
+        ],
+        "format": "esm"
+      },
+      "../testeranto/src/lib/basebuilder.ts": {
+        "bytes": 6058,
+        "imports": [
+          {
+            "path": "stream",
+            "kind": "import-statement",
+            "external": true
+          },
+          {
+            "path": "../Types.js",
+            "kind": "import-statement",
+            "external": true
+          },
+          {
+            "path": ".",
+            "kind": "import-statement",
+            "external": true
+          },
+          {
+            "path": "./types.js",
+            "kind": "import-statement",
+            "external": true
+          },
+          {
+            "path": "./abstractBase.js",
+            "kind": "import-statement",
+            "external": true
+          }
+        ],
+        "format": "esm"
+      },
+      "../testeranto/src/lib/classBuilder.ts": {
+        "bytes": 3529,
+        "imports": [
+          {
+            "path": "../Types.js",
+            "kind": "import-statement",
+            "external": true
+          },
+          {
+            "path": "../testeranto/src/lib/basebuilder.ts",
+            "kind": "import-statement",
+            "original": "./basebuilder.js"
+          },
+          {
+            "path": "./types.js",
+            "kind": "import-statement",
+            "external": true
+          },
+          {
+            "path": "./index.js",
+            "kind": "import-statement",
+            "external": true
+          },
+          {
+            "path": "./abstractBase.js",
+            "kind": "import-statement",
+            "external": true
+          }
+        ],
+        "format": "esm"
+      },
+      "../testeranto/src/lib/core.ts": {
+        "bytes": 4918,
+        "imports": [
+          {
+            "path": "../Types.js",
+            "kind": "import-statement",
+            "external": true
+          },
+          {
+            "path": "../testeranto/src/lib/index.ts",
+            "kind": "import-statement",
+            "original": "./index.js"
+          },
+          {
+            "path": "../testeranto/src/lib/abstractBase.ts",
+            "kind": "import-statement",
+            "original": "./abstractBase.js"
+          },
+          {
+            "path": "../testeranto/src/lib/classBuilder.ts",
+            "kind": "import-statement",
+            "original": "./classBuilder.js"
+          },
+          {
+            "path": "./types",
+            "kind": "import-statement",
+            "external": true
+          }
+        ],
+        "format": "esm"
+      },
+      "../testeranto/src/PM/index.ts": {
+        "bytes": 1838,
+        "imports": [
+          {
+            "path": "puppeteer-core",
+            "kind": "import-statement",
+            "external": true
+          },
+          {
+            "path": "puppeteer-core/lib/esm/puppeteer",
+            "kind": "import-statement",
+            "external": true
+          },
+          {
+            "path": "../lib",
+            "kind": "import-statement",
+            "external": true
+          }
+        ],
+        "format": "esm"
+      },
+      "../testeranto/src/PM/pure.ts": {
+        "bytes": 5858,
+        "imports": [
+          {
+            "path": "puppeteer-core",
+            "kind": "import-statement",
+            "external": true
+          },
+          {
+            "path": "puppeteer-core/lib/esm/puppeteer",
+            "kind": "import-statement",
+            "external": true
+          },
+          {
+            "path": "stream",
+            "kind": "import-statement",
+            "external": true
+          },
+          {
+            "path": "../lib",
+            "kind": "import-statement",
+            "external": true
+          },
+          {
+            "path": "../testeranto/src/PM/index.ts",
+            "kind": "import-statement",
+            "original": "."
+          }
+        ],
+        "format": "esm"
+      },
+      "../testeranto/src/Pure.ts": {
+        "bytes": 1797,
+        "imports": [
+          {
+            "path": "../testeranto/src/lib/core.ts",
+            "kind": "import-statement",
+            "original": "./lib/core.js"
+          },
+          {
+            "path": "../testeranto/src/lib/index.ts",
+            "kind": "import-statement",
+            "original": "./lib/index.js"
+          },
+          {
+            "path": "../testeranto/src/PM/pure.ts",
+            "kind": "import-statement",
+            "original": "./PM/pure.js"
+          }
+        ],
+        "format": "esm"
+      },
+      "node_modules/chai/chai.js": {
+        "bytes": 139547,
+        "imports": [],
+        "format": "esm"
+      },
+      "src/Rectangle/Rectangle.ts": {
+        "bytes": 563,
+        "imports": [],
+        "format": "esm"
+      },
+      "src/Rectangle/Rectangle.test.implementation.ts": {
+        "bytes": 2524,
+        "imports": [
+          {
+            "path": "node_modules/chai/chai.js",
+            "kind": "import-statement",
+            "original": "chai"
+          },
+          {
+            "path": "src/Rectangle/Rectangle.ts",
+            "kind": "import-statement",
+            "original": "./Rectangle"
+          },
+          {
+            "path": "./Rectangle.test.specification",
+            "kind": "import-statement",
+            "external": true
+          }
+        ],
+        "format": "esm"
+      },
+      "src/Rectangle/Rectangle.test.specification.ts": {
+        "bytes": 2005,
+        "imports": [
+          {
+            "path": "testeranto/src/Types",
+            "kind": "import-statement",
+            "external": true
+          }
+        ],
+        "format": "esm"
+      },
+      "src/Rectangle/Rectangle.test.interface.ts": {
+        "bytes": 795,
+        "imports": [
+          {
+            "path": "testeranto/src/Types",
+            "kind": "import-statement",
+            "external": true
+          },
+          {
+            "path": "testeranto/src/lib/index",
+            "kind": "import-statement",
+            "external": true
+          },
+          {
+            "path": "./Rectangle",
+            "kind": "import-statement",
+            "external": true
+          },
+          {
+            "path": "node:test",
+            "kind": "import-statement",
+            "external": true
+          }
+        ],
+        "format": "esm"
+      },
+      "src/Rectangle/Rectangle.test.pure.ts": {
+        "bytes": 473,
+        "imports": [
+          {
+            "path": "../testeranto/src/Pure.ts",
+            "kind": "import-statement",
+            "original": "testeranto/src/Pure"
+          },
+          {
+            "path": "src/Rectangle/Rectangle.test.implementation.ts",
+            "kind": "import-statement",
+            "original": "./Rectangle.test.implementation"
+          },
+          {
+            "path": "src/Rectangle/Rectangle.test.specification.ts",
+            "kind": "import-statement",
+            "original": "./Rectangle.test.specification"
+          },
+          {
+            "path": "src/Rectangle/Rectangle.test.interface.ts",
+            "kind": "import-statement",
+            "original": "./Rectangle.test.interface"
+          }
+        ],
+        "format": "esm"
+      }
+    },
+    "outputs": {
+      "testeranto/bundles/pure/rectangle/src/Rectangle/Rectangle.test.pure.mjs": {
+        "imports": [],
+        "exports": [
+          "default"
+        ],
+        "entryPoint": "src/Rectangle/Rectangle.test.pure.ts",
+        "inputs": {
+          "../testeranto/src/lib/index.ts": {
+            "bytesInOutput": 674
+          },
+          "../testeranto/src/lib/pmProxy.ts": {
+            "bytesInOutput": 3201
+          },
+          "../testeranto/src/lib/abstractBase.ts": {
+            "bytesInOutput": 6852
+          },
+          "../testeranto/src/lib/basebuilder.ts": {
+            "bytesInOutput": 2740
+          },
+          "../testeranto/src/lib/classBuilder.ts": {
+            "bytesInOutput": 2248
+          },
+          "../testeranto/src/lib/core.ts": {
+            "bytesInOutput": 2684
+          },
+          "../testeranto/src/PM/index.ts": {
+            "bytesInOutput": 20
+          },
+          "../testeranto/src/PM/pure.ts": {
+            "bytesInOutput": 3131
+          },
+          "../testeranto/src/Pure.ts": {
+            "bytesInOutput": 809
+          },
+          "node_modules/chai/chai.js": {
+            "bytesInOutput": 130527
+          },
+          "src/Rectangle/Rectangle.ts": {
+            "bytesInOutput": 479
+          },
+          "src/Rectangle/Rectangle.test.implementation.ts": {
+            "bytesInOutput": 1992
+          },
+          "src/Rectangle/Rectangle.test.specification.ts": {
+            "bytesInOutput": 1385
+          },
+          "src/Rectangle/Rectangle.test.interface.ts": {
+            "bytesInOutput": 346
+          },
+          "src/Rectangle/Rectangle.test.pure.ts": {
+            "bytesInOutput": 183
+          }
+        },
+        "bytes": 165432
+      }
+    }
   }
 }

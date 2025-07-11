@@ -1,9 +1,24 @@
 {
-  "reportDomain": "https://adamwong246.github.io/testeranto-starter/",
   "tests": [
     [
       "./src/Rectangle/Rectangle.test.node.ts",
       "node",
+      {
+        "ports": 0
+      },
+      []
+    ],
+    [
+      "./src/Rectangle/Rectangle.test.web.ts",
+      "web",
+      {
+        "ports": 0
+      },
+      []
+    ],
+    [
+      "./src/Rectangle/Rectangle.test.pure.ts",
+      "pure",
       {
         "ports": 0
       },

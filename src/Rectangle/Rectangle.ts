@@ -1,5 +1,3 @@
-console.log("HELLO RECTANGLE");
-
 class Rectangle {
   height: number;
   width: number;

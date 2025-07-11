@@ -1,0 +1,16 @@
+stdout > then.getWidth 2
+stdout > then.getWidth 4
+then.getHeight 5
+stdout > then.getWidth 2
+then.getHeight 2
+then.getWidth 2
+then.getHeight 2
+stdout > toObj error undefined
+toObj error undefined
+toObj error undefined
+toObj error undefined
+toObj error undefined
+toObj error undefined
+toObj error undefined
+toObj error undefined
+stderr > goodbye node with failures 0
